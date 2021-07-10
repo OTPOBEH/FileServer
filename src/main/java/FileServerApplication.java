@@ -1,6 +1,6 @@
 import errors.mappers.ApiExceptionMapper;
 import errors.mappers.RuntimeExceptionMapper;
-import healthchecks.DummyHealthCheck;
+import healthchecks.FileServerHealthCheck;
 import repositories.FileRepository;
 import resources.FileResourceImpl;
 import services.FileService;
@@ -58,6 +58,6 @@ public class FileServerApplication extends Application<FileServerConfiguration> 
         environment.jersey().register(MultiPartFeature.class);
         environment.jersey().register(new ApiExceptionMapper());
         environment.jersey().register(new RuntimeExceptionMapper());
-        environment.healthChecks().register("APIHealthCheck", new DummyHealthCheck());
+        environment.healthChecks().register("APIHealthCheck", new FileServerHealthCheck(defaultFolderPath));
     }
 }
