@@ -26,6 +26,7 @@ The main method is in the ```FileServerApplication.java``` class.
 
 ### @PUT (HTTP 200)
 Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
+
 Address: ```http://localhost:8080/v1/files``` 
 
 Response entity:
@@ -41,7 +42,7 @@ Address: ```http://localhost:8080/v1/files?file=Test.txt```
 Response entity:
 ```json
 {
-    "fileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin interdum nisi pretium mollis."
+    "fileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
 }
 ```
 
