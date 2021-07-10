@@ -24,14 +24,15 @@ The main method is in the ```FileServerApplication.java``` class.
 
 ## Endpoint Examples
 
-### @PUT
+### @PUT (HTTP 200)
 Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
 
 Address: ```http://localhost:8080/v1/files```
-### @GET 
+
+### @GET (HTTP 200)
 Address: ```http://localhost:8080/v1/files?file=Test.txt```
 
-### @DELETE
+### @DELETE (HTTP 204)
 Address: ```http://localhost:8080/v1/files?file=Test.txt```
 
 ## Health Check Endpoint
