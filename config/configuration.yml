@@ -1,3 +1,3 @@
 #The following are required
 defaultFolderPath: .\\ # Project root folder directory.(Can be changed to any other valid directory)
-supportedFileExtensions: PDF,TXT,CSV # Uppercase comma-separated file extensions (Can be changed according to the user's entitlements)
+supportedFileExtensions: TXT,CSV # Uppercase comma-separated file extensions (Can be changed according to the user's entitlements)
