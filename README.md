@@ -26,11 +26,24 @@ The main method is in the ```FileServerApplication.java``` class.
 
 ### @PUT (HTTP 200)
 Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
+Address: ```http://localhost:8080/v1/files``` 
 
-Address: ```http://localhost:8080/v1/files```
+Response entity:
+```json
+{
+    "filePath": "E:\\Java\\Repos\\FileServer\\Test.txt"
+}
+```
 
 ### @GET (HTTP 200)
 Address: ```http://localhost:8080/v1/files?file=Test.txt```
+
+Response entity:
+```json
+{
+    "fileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin interdum nisi pretium mollis."
+}
+```
 
 ### @DELETE (HTTP 204)
 Address: ```http://localhost:8080/v1/files?file=Test.txt```
@@ -39,3 +52,19 @@ Address: ```http://localhost:8080/v1/files?file=Test.txt```
 Checks if the default folder is reachable.
 
 Address: ```http://localhost:8081/healthcheck```
+
+Response entity:
+```json
+{
+    "APIHealthCheck": {
+        "healthy": true,
+        "duration": 1,
+        "timestamp": "2021-07-11T00:59:48.741+03:00"
+    },
+    "deadlocks": {
+        "healthy": true,
+        "duration": 0,
+        "timestamp": "2021-07-11T00:59:48.740+03:00"
+    }
+}
+```
