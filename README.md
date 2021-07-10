@@ -24,7 +24,7 @@ The main method is in the ```FileServerApplication.java``` class.
 ## Endpoint Examples
 
 ### @PUT
-User form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
+Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
 
 Address: ```http://localhost:8080/v1/files```
 ### @GET 
