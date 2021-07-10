@@ -32,3 +32,7 @@ Address: ```http://localhost:8080/v1/files?file=Test.txt```
 
 ### @DELETE
 Address: ```http://localhost:8080/v1/files?file=Test.txt```
+
+## Health Check Endpoint
+Checks if the default folder is reachable.
+Address: ```http://localhost:8081/healthcheck```
