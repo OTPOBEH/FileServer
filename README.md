@@ -3,19 +3,10 @@
 
 This is a RESTful API for Uploading/Downloading/Deleteing a File.
 It is based on [Dropwizard](https://www.dropwizard.io) framework.
-Instructions for running the API can be found at the bottom of this file.
-
-## Application Start
-
-You can start the application with the following program paramethers
-
-```bash
-server config\configuration.yml
-```
 
 The file resource path is ```.../v1/files```.
 
-The main method is in the ```FileServerApplication.java``` class.
+Instructions for running the API can be found at the bottom of this file.
 
 ## Endpoint Examples
 
@@ -79,7 +70,20 @@ supportedFileExtensions: TXT,CSV
 
 Build project with maven to assemble one fat ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
 
-### The command for starting the API:
+
+## Application Start 
+
+### Starting the API using IDE (e.g. IntelliJ)
+
+You can start the application with the following program paramethers
+
+```bash
+server config\configuration.yml
+```
+
+The main method is in the ```FileServerApplication.java``` class.
+
+### Starting the API .jar using command:
 
 ```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server {path to configuration.yml}```
 
