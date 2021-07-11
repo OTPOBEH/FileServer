@@ -45,7 +45,7 @@ public class FileResourceImpl implements FileResource {
 
     @Override
     @GET
-    @Path("/{filename}")
+    @Path(Constants.FILENAME_PATH_PARAM_PLACEHOLDER)
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM})
     public Response download(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename) {
 
@@ -59,7 +59,7 @@ public class FileResourceImpl implements FileResource {
 
     @Override
     @DELETE
-    @Path("/{filename}")
+    @Path(Constants.FILENAME_PATH_PARAM_PLACEHOLDER)
     @Produces(MediaType.APPLICATION_JSON)
     public Response delete(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename) {
 
