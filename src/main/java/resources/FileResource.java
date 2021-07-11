@@ -1,6 +1,7 @@
 package resources;
 
 import java.io.InputStream;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -24,9 +25,9 @@ public interface FileResource {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM})
-    Response download(@QueryParam(Constants.FILE_QUERY_PARAM) String file);
+    public Response download(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename);
 
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    Response delete(@QueryParam(Constants.FILE_QUERY_PARAM) String file);
+    Response delete(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename);
 }

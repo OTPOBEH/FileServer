@@ -7,6 +7,7 @@ import services.FileService;
 
 import java.io.InputStream;
 import javax.inject.Inject;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -45,7 +46,7 @@ public class FileResourceImpl implements FileResource {
     @GET
     @Path("/{filename}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM})
-    public Response download(@PathParam("filename") String filename) {
+    public Response download(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename) {
 
         FIleResult fileDownload = fileService.getFromDefaultFolder(filename);
 
@@ -59,7 +60,7 @@ public class FileResourceImpl implements FileResource {
     @DELETE
     @Path("/{filename}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response delete(@PathParam("filename") String filename) {
+    public Response delete(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename) {
 
         fileService.deleteFromDefaultFolder(filename);
 
