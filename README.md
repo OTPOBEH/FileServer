@@ -37,6 +37,7 @@ Response entity:
 ```
 
 ### @GET (HTTP 200)
+Example for a file ```Test.txt``` below:
 Address: ```http://localhost:8080/v1/files/Test.txt```
 
 Response entity:
@@ -47,6 +48,7 @@ Response entity:
 ```
 
 ### @DELETE (HTTP 204)
+Example for a file ```Test.txt``` below:
 Address: ```http://localhost:8080/v1/files/Test.txt```
 
 ## Health Check Endpoint
