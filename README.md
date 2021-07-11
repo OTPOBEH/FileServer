@@ -47,7 +47,7 @@ Response entity:
 ```
 
 ### @DELETE (HTTP 204)
-Address: ```http://localhost:8080/v1/files?file=Test.txt```
+Address: ```http://localhost:8080/v1/files/Test.txt```
 
 ## Health Check Endpoint
 Checks if the default folder is reachable.
