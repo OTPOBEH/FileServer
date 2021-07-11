@@ -23,6 +23,9 @@ Response entity:
 ```
 
 ### @GET (HTTP 200)
+
+```/v1/files/{filename}```
+
 Example for a file ```Test.txt``` below:
 
 Address: ```http://localhost:8080/v1/files/Test.txt```
@@ -35,6 +38,9 @@ Response entity:
 ```
 
 ### @DELETE (HTTP 204)
+
+```/v1/files/{filename}```
+
 Example for a file ```Test.txt``` below:
 
 Address: ```http://localhost:8080/v1/files/Test.txt```
