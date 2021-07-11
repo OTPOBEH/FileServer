@@ -12,14 +12,6 @@ You can start the application with the following program paramethers
 server config\configuration.yml
 ```
 
-## Usage
-The application is listening at port ```8080```.
-There is a config file under ```config/configuration.yml``` containing the following configurable paramethers:
-```yaml
-defaultFolderPath: .\\ 
-supportedFileExtensions: TXT,CSV
-```
-
 The file resource path is ```.../v1/files```.
 
 The main method is in the ```FileServerApplication.java``` class.
@@ -75,3 +67,21 @@ Response entity:
     }
 }
 ```
+
+## Usage
+The application is listening at port ```8080```.
+There is a config file under ```config/configuration.yml``` containing the following configurable paramethers:
+```yaml
+defaultFolderPath: .\\ 
+supportedFileExtensions: TXT,CSV
+```
+
+Build project with maven to assemble one fat ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
+
+The command for starting the API(the exa):
+
+```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server {path to configuration.yml}```
+
+If the }```configuration.yml}``` file is in the same folder as the .jar the command would be:
+
+```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server configuration.yml```
