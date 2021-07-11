@@ -20,6 +20,8 @@ defaultFolderPath: .\\
 supportedFileExtensions: TXT,CSV
 ```
 
+The file resource path is ```.../v1/files```.
+
 The main method is in the ```FileServerApplication.java``` class.
 
 ## Endpoint Examples
