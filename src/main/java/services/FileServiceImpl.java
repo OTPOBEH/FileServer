@@ -55,7 +55,7 @@ public class FileServiceImpl implements FileService {
 
         String filename = fileDetail.getFileName();
 
-        validateVileExtension(filename);
+        validateFileExtension(filename);
 
         destinationPath = formatPath(destinationPath);
 
@@ -78,7 +78,7 @@ public class FileServiceImpl implements FileService {
 
     public FIleResult get(String filePath, String filename) {
 
-        validateVileExtension(filename);
+        validateFileExtension(filename);
 
         filePath = formatPath(filePath);
 
@@ -102,7 +102,7 @@ public class FileServiceImpl implements FileService {
 
     public void delete(String filePath, String filename) {
 
-        validateVileExtension(filename);
+        validateFileExtension(filename);
 
         filePath = formatPath(filePath);
 
@@ -142,7 +142,7 @@ public class FileServiceImpl implements FileService {
         return filePath;
     }
 
-    private void validateVileExtension(String filename) {
+    private void validateFileExtension(String filename) {
 
         String fileExtension = FilenameUtils.getExtension(filename);
 
