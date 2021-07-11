@@ -11,9 +11,12 @@ Instructions for running the API can be found at the bottom of this file.
 ## Endpoint Examples
 
 ### @PUT (HTTP 200)
-Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv``` .
 
-Address: ```http://localhost:8080/v1/files``` 
+```/v1/files/```
+
+Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv```(configurable via ```configuration.yml```).
+
+Example: ```http://localhost:8080/v1/files``` 
 
 Response entity:
 ```json
@@ -28,7 +31,7 @@ Response entity:
 
 Example for a file ```Test.txt``` below:
 
-Address: ```http://localhost:8080/v1/files/Test.txt```
+Example: ```http://localhost:8080/v1/files/Test.txt```
 
 Response entity:
 ```json
@@ -43,7 +46,7 @@ Response entity:
 
 Example for a file ```Test.txt``` below:
 
-Address: ```http://localhost:8080/v1/files/Test.txt```
+Example: ```http://localhost:8080/v1/files/Test.txt```
 
 ## Health Check Endpoint
 Checks if the default folder is reachable.
