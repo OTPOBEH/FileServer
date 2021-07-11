@@ -14,7 +14,7 @@ Instructions for running the API can be found at the bottom of this file.
 
 ```/v1/files/```
 
-Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv```(configurable via ```configuration.yml```).
+Use form-data with a key ```file``` and a linked file of type ``` *.txt```  or ``` *.csv```(configurable via ```configuration.yml```, see below).
 
 Example: ```http://localhost:8080/v1/files``` 
 
