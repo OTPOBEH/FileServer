@@ -64,8 +64,11 @@ Response entity:
 The application is listening at port ```8080```.
 There is a config file under ```config/configuration.yml``` containing the following configurable paramethers:
 ```yaml
-defaultFolderPath: .\\ 
-supportedFileExtensions: TXT,CSV
+# Project root folder directory.(Can be changed to any other valid directory)
+defaultFolderPath: .\\
+
+# Uppercase comma-separated file extensions (according to the user's entitlements)
+supportedFileExtensions: TXT,CSV # Uppercase comma-separated file extensions (according to the user's entitlements)
 ```
 
 Build project with maven to assemble one fat ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
