@@ -9,6 +9,7 @@ import java.io.InputStream;
 import javax.inject.Inject;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -51,7 +52,7 @@ public class FileResourceImpl implements FileResource {
         FIleResult fileDownload = fileService.getFromDefaultFolder(filename);
 
         Response.ResponseBuilder response = Response.ok(fileDownload);
-        response.header("Content-Disposition", "filename=" + filename);
+        response.header(HttpHeaders.CONTENT_DISPOSITION, "filename=" + filename);
 
         return response.build();
     }
