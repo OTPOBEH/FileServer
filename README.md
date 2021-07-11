@@ -3,6 +3,7 @@
 
 This is a RESTful API for Uploading/Downloading/Deleteing a File.
 It is based on [Dropwizard](https://www.dropwizard.io) framework.
+Instructions for running the API can be found at the bottom of this file.
 
 ## Application Start
 
