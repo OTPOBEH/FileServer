@@ -78,10 +78,10 @@ supportedFileExtensions: TXT,CSV
 
 Build project with maven to assemble one fat ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
 
-The command for starting the API(the exa):
+### The command for starting the API:
 
 ```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server {path to configuration.yml}```
 
-If the }```configuration.yml}``` file is in the same folder as the .jar the command would be:
+If the ```configuration.yml``` file is in the same folder as the .jar the command would be:
 
 ```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server configuration.yml```
