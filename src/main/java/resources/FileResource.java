@@ -25,7 +25,7 @@ public interface FileResource {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM})
-    public Response download(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename);
+    Response download(@NotNull @PathParam(Constants.FILENAME_PATH_PARAM) String filename);
 
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
