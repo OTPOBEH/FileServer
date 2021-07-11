@@ -43,23 +43,25 @@ public class FileResourceImpl implements FileResource {
 
     @Override
     @GET
+    @Path("/{filename}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_OCTET_STREAM})
-    public Response download(@QueryParam(Constants.FILE_QUERY_PARAM) String file) {
+    public Response download(@PathParam("filename") String filename) {
 
-        FIleResult fileDownload = fileService.getFromDefaultFolder(file);
+        FIleResult fileDownload = fileService.getFromDefaultFolder(filename);
 
         Response.ResponseBuilder response = Response.ok(fileDownload);
-        response.header("Content-Disposition", "filename=" + file);
+        response.header("Content-Disposition", "filename=" + filename);
 
         return response.build();
     }
 
     @Override
     @DELETE
+    @Path("/{filename}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response delete(@QueryParam(Constants.FILE_QUERY_PARAM) String file) {
+    public Response delete(@PathParam("filename") String filename) {
 
-        fileService.deleteFromDefaultFolder(file);
+        fileService.deleteFromDefaultFolder(filename);
 
         return Response.noContent().build();
     }

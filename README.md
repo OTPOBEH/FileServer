@@ -37,7 +37,7 @@ Response entity:
 ```
 
 ### @GET (HTTP 200)
-Address: ```http://localhost:8080/v1/files?file=Test.txt```
+Address: ```http://localhost:8080/v1/files/Test.txt```
 
 Response entity:
 ```json
