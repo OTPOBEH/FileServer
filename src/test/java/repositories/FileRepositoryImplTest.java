@@ -1,4 +1,4 @@
-package services;
+package repositories;
 
 import java.io.InputStream;
 import java.util.Set;

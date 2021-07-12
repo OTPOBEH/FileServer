@@ -1,4 +1,4 @@
-package services;
+package resources;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -14,7 +14,7 @@ import models.FileInfoResult;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import resources.FileResource;
+import services.FileServiceImpl;
 
 /**
  * Created by spetrov on 07/12/2021.
