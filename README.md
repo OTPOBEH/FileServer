@@ -97,8 +97,6 @@ The main method is in the ```FileServerApplication.java``` class.
 
 ### Starting the API .jar using command:
 
-Building the project using Maven will produce 'fat-jar' called ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
-
 Command: 
 ```java -jar "FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar" server {path to configuration.yml}```
 
