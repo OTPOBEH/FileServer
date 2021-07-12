@@ -2,14 +2,13 @@ import errors.mappers.ApiExceptionMapper;
 import errors.mappers.RuntimeExceptionMapper;
 import healthchecks.FileServerHealthCheck;
 import repositories.FileRepository;
-import resources.FileResourceImpl;
+import resources.FileResource;
 import services.FileService;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import repositories.FileRepositoryImpl;
-import resources.FileResource;
 import services.FileServiceImpl;
 
 import java.io.File;
@@ -40,7 +39,7 @@ public class FileServerApplication extends Application<FileServerConfiguration> 
 
         final FileService fileService =
                 new FileServiceImpl(fileRepository, defaultFolderPath, supportedFileExtensions);
-        final FileResource fileResource = new FileResourceImpl(fileService);
+        final FileResource fileResource = new FileResource(fileService);
 
         environment
                 .jersey()
