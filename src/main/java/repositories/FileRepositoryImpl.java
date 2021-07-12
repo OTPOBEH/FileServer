@@ -24,7 +24,7 @@ public class FileRepositoryImpl implements FileRepository {
                 outputStream.write(data, 0, length);
             }
 
-            outputStream.flush(); //TODO: Check for specifics of when flush is required
+            outputStream.flush();
         }
     }
 
