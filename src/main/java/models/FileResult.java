@@ -1,12 +1,12 @@
 package models;
 
-public class FIleResult {
+public class FileResult {
 
     private String fileContent;
 
-    public FIleResult() {fileContent = "";}
+    public FileResult() {fileContent = "";}
 
-    public FIleResult(String fileContent) {
+    public FileResult(String fileContent) {
         this.fileContent = fileContent;
     }
 
