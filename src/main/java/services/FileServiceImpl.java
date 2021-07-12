@@ -8,7 +8,7 @@ import errors.codes.InternalErrorCode;
 import java.io.FileNotFoundException;
 import java.nio.file.NoSuchFileException;
 
-import models.FIleResult;
+import models.FileResult;
 import models.FileInfoResult;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -23,11 +23,11 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import resources.FileResourceImpl;
+import resources.FileResource;
 
 public class FileServiceImpl implements FileService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FileResourceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FileResource.class);
     private final String defaultFileFolderPath;
     private final FileRepository fileRepository;
     private final Set<String> supportedFileExtensions;
@@ -76,7 +76,7 @@ public class FileServiceImpl implements FileService {
         return new FileInfoResult(location);
     }
 
-    public FIleResult get(String filePath, String filename) {
+    public FileResult get(String filePath, String filename) {
 
         validateFileExtension(filename);
 
@@ -96,7 +96,7 @@ public class FileServiceImpl implements FileService {
         return createFileResult(fileDownload);
     }
 
-    public FIleResult getFromDefaultFolder(String filename) {
+    public FileResult getFromDefaultFolder(String filename) {
         return get(defaultFileFolderPath, filename);
     }
 
@@ -157,14 +157,14 @@ public class FileServiceImpl implements FileService {
         }
     }
 
-    private FIleResult createFileResult(File file) {
+    private FileResult createFileResult(File file) {
         String fileContent;
         try {
             fileContent = FileUtils.readFileToString(file);
         } catch (IOException e) {
             throw new ApiException(InternalErrorCode.GENERAL_ERROR);
         }
-        return new FIleResult(fileContent);
+        return new FileResult(fileContent);
     }
 
     //endregion

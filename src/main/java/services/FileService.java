@@ -1,6 +1,6 @@
 package services;
 
-import models.FIleResult;
+import models.FileResult;
 import models.FileInfoResult;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 
@@ -15,9 +15,9 @@ public interface FileService {
 
     FileInfoResult save(InputStream inputStream, String destinationPath, FormDataContentDisposition detail);
 
-    FIleResult get(String filePath, String filename);
+    FileResult get(String filePath, String filename);
 
-    FIleResult getFromDefaultFolder(String filename);
+    FileResult getFromDefaultFolder(String filename);
 
     void delete(String filePath, String filename);
 
