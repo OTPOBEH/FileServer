@@ -4,4 +4,4 @@
 defaultFolderPath: .\\
 
 # Uppercase comma-separated file extensions (according to the user's entitlements)
-supportedFileExtensions: TXT,CSV # Uppercase comma-separated file extensions (according to the user's entitlements)
+supportedFileExtensions: TXT,CSV
