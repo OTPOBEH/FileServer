@@ -101,6 +101,7 @@ public class FileServiceImpl implements FileService {
     }
 
     public void delete(String filePath, String filename) {
+        LOGGER.info("START: Deleting file {} from location: {}", filename, filePath);
 
         validateFileExtension(filename);
 
@@ -115,6 +116,8 @@ public class FileServiceImpl implements FileService {
         } catch (Exception ex) {
             throw new ApiException(InternalErrorCode.GENERAL_ERROR, ex);
         }
+
+        LOGGER.info("END: Deleting file {} from location: {}", filename, filePath);
     }
 
     public void deleteFromDefaultFolder(String filename) {
