@@ -77,7 +77,7 @@ There is a config file under ```config/configuration.yml``` containing the follo
 defaultFolderPath: .\\
 
 # Uppercase comma-separated file extensions (according to the user's entitlements)
-supportedFileExtensions: TXT,CSV # Uppercase comma-separated file extensions (according to the user's entitlements)
+supportedFileExtensions: TXT,CSV
 ```
 
 Build project with maven to assemble one fat ```FileServer-1.0-SNAPSHOT-jar-with-dependencies.jar```
