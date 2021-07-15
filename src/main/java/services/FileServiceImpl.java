@@ -118,7 +118,7 @@ public class FileServiceImpl implements FileService {
             throw new ApiException(InternalErrorCode.GENERAL_ERROR, ex);
         }
 
-        LOGGER.info("END: Deleting file {} from location: {}", filename, filePath);
+        LOGGER.info("END: Deleting file {} from location: {}", filename, location);
     }
 
     public void deleteFromDefaultFolder(String filename) {
