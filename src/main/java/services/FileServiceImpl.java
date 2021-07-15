@@ -101,13 +101,14 @@ public class FileServiceImpl implements FileService {
     }
 
     public void delete(String filePath, String filename) {
-        LOGGER.info("START: Deleting file {} from location: {}", filename, filePath);
 
         validateFileExtension(filename);
 
         filePath = formatPath(filePath);
 
         String location = getAbsolutePath(filePath + filename);
+
+        LOGGER.info("START: Deleting file {} from location: {}", filename, location);
 
         try {
             fileRepository.delete(location);
